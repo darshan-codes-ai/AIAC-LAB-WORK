@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F7"/>
+      <stop offset="100%" stop-color="#FED7DE"/>
+    </linearGradient>
+    <linearGradient id="crust" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DDA15E"/>
+      <stop offset="100%" stop-color="#BC6C25"/>
+    </linearGradient>
+    <linearGradient id="cheese" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF0"/>
+      <stop offset="100%" stop-color="#FDF0D5"/>
+    </linearGradient>
+    <linearGradient id="glaze" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D90429"/>
+      <stop offset="50%" stop-color="#EF233C"/>
+      <stop offset="100%" stop-color="#C9184A"/>
+    </linearGradient>
+    <filter id="sc-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#541B26" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#sc-bg)"/>
+
+  <!-- Plate -->
+  <ellipse cx="200" cy="245" rx="120" ry="16" fill="#F0E3E5" opacity="0.7"/>
+  <ellipse cx="200" cy="240" rx="105" ry="12" fill="#FFFFFF"/>
+
+  <g filter="url(#sc-shadow)">
+    <!-- Cheesecake Slice -->
+    <!-- Graham Cracker Crust -->
+    <polygon points="120,210 280,210 320,175 160,175" fill="url(#crust)"/>
+    <polygon points="120,210 280,210 280,225 120,225" fill="#99582A"/>
+
+    <!-- Silky Cheesecake Body -->
+    <polygon points="120,150 280,150 280,210 120,210" fill="url(#cheese)"/>
+    <polygon points="280,150 320,120 320,175 280,210" fill="#EBD6B0"/>
+
+    <!-- Top Surface with Strawberry Glaze -->
+    <polygon points="120,150 280,150 320,120 160,120" fill="url(#glaze)"/>
+
+    <!-- Strawberry Glaze Drips -->
+    <path d="M120 150 Q130 168 140 150 Q160 178 175 150 Q200 170 215 150 Q240 165 255 150 Q270 162 280 150" fill="url(#glaze)"/>
+
+    <!-- Sliced Strawberries on Top -->
+    <ellipse cx="220" cy="132" rx="16" ry="10" fill="#D90429" transform="rotate(-15 220 132)"/>
+    <ellipse cx="220" cy="132" rx="11" ry="6" fill="#FF758F" transform="rotate(-15 220 132)"/>
+    <circle cx="218" cy="132" r="1" fill="#FFFFFF"/>
+    <circle cx="223" cy="134" r="1" fill="#FFFFFF"/>
+
+    <ellipse cx="250" cy="126" rx="14" ry="9" fill="#D90429" transform="rotate(10 250 126)"/>
+    <ellipse cx="250" cy="126" rx="9" ry="5" fill="#FF758F" transform="rotate(10 250 126)"/>
+
+    <!-- Mint Leaves -->
+    <path d="M210 122 C200 115 195 105 208 110 C215 113 218 120 210 122 Z" fill="#52B788"/>
+    <path d="M215 120 C220 110 230 108 228 118 C226 122 220 122 215 120 Z" fill="#74C69D"/>
+  </g>
+</svg>
+

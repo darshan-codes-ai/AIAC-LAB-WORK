@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#FCEEE3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="16" fill="url(#fb-bg)"/>
+  <circle cx="200" cy="130" r="50" fill="#F8BBD0" opacity="0.3"/>
+  <path d="M170 145 C160 110 240 110 230 145 Z" fill="#D4A373"/>
+  <circle cx="200" cy="115" r="10" fill="#E76F51"/>
+  <text x="200" y="210" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="18" fill="#4A2511" text-anchor="middle">Sweet Crumbs Delight</text>
+  <text x="200" y="235" font-family="'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="13" fill="#8D6E63" text-anchor="middle">Freshly Baked Artisanal Treat</text>
+</svg>
+

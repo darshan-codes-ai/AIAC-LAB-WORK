@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cupcake-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F0"/>
+      <stop offset="100%" stop-color="#FFEEDD"/>
+    </linearGradient>
+    <linearGradient id="choc-swirl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6F3F1F"/>
+      <stop offset="50%" stop-color="#4A2511"/>
+      <stop offset="100%" stop-color="#361707"/>
+    </linearGradient>
+    <linearGradient id="cup-liner" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB5A7"/>
+      <stop offset="50%" stop-color="#FCD5CE"/>
+      <stop offset="100%" stop-color="#F8AD9D"/>
+    </linearGradient>
+    <filter id="cc-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#3D1E0C" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#cupcake-bg)"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="250" rx="75" ry="12" fill="#D3B8AA" opacity="0.4"/>
+
+  <g filter="url(#cc-shadow)">
+    <!-- Pastel Pink Liner -->
+    <path d="M145 170 L158 245 L242 245 L255 170 Z" fill="url(#cup-liner)"/>
+    <!-- Pleat lines -->
+    <line x1="162" y1="170" x2="170" y2="245" stroke="#E29578" stroke-width="2" opacity="0.7"/>
+    <line x1="182" y1="170" x2="187" y2="245" stroke="#E29578" stroke-width="2" opacity="0.7"/>
+    <line x1="200" y1="170" x2="200" y2="245" stroke="#E29578" stroke-width="2" opacity="0.7"/>
+    <line x1="218" y1="170" x2="213" y2="245" stroke="#E29578" stroke-width="2" opacity="0.7"/>
+    <line x1="238" y1="170" x2="230" y2="245" stroke="#E29578" stroke-width="2" opacity="0.7"/>
+
+    <!-- Chocolate Sponge rim -->
+    <ellipse cx="200" cy="170" rx="55" ry="12" fill="#5A2E12"/>
+
+    <!-- Chocolate Buttercream Swirl -->
+    <!-- Tier 1 -->
+    <path d="M140 165 C135 145 265 145 260 165 C255 180 145 180 140 165 Z" fill="url(#choc-swirl)"/>
+    <!-- Tier 2 -->
+    <path d="M152 145 C150 120 250 120 248 145 C240 155 160 155 152 145 Z" fill="url(#choc-swirl)"/>
+    <!-- Tier 3 Swirl Top -->
+    <path d="M170 120 C170 85 220 80 225 110 C225 125 175 130 170 120 Z" fill="url(#choc-swirl)"/>
+    <!-- Tip of Swirl -->
+    <path d="M195 90 Q205 68 215 75 Q210 92 195 90" fill="url(#choc-swirl)"/>
+
+    <!-- Rainbow / Gold Sprinkles -->
+    <rect x="170" y="145" width="8" height="3" rx="1.5" fill="#FFB703" transform="rotate(30 170 145)"/>
+    <rect x="220" y="140" width="8" height="3" rx="1.5" fill="#E76F51" transform="rotate(-40 220 140)"/>
+    <rect x="195" y="152" width="8" height="3" rx="1.5" fill="#2A9D8F" transform="rotate(10 195 152)"/>
+    <rect x="180" y="115" width="7" height="3" rx="1.5" fill="#E63946" transform="rotate(-25 180 115)"/>
+    <rect x="215" y="118" width="7" height="3" rx="1.5" fill="#FFB703" transform="rotate(45 215 118)"/>
+    <rect x="195" y="100" width="6" height="3" rx="1.5" fill="#F4A261" transform="rotate(15 195 100)"/>
+  </g>
+</svg>
+

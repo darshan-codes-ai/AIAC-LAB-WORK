@@ -1,0 +1,24 @@
+{
+  "name": "campus-enroll",
+  "version": "1.0.0",
+  "description": "CampusEnroll - Student Course Registration System and REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [
+    "student-registration",
+    "course-enrollment",
+    "express",
+    "rest-api",
+    "vanilla-javascript",
+    "college-assignment"
+  ],
+  "author": "College Student",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+

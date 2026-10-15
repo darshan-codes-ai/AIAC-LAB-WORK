@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sweet Crumbs - Artisan Online Bakery offering freshly baked cakes, pastries, cookies, and handcrafted treats.">
+  <title>Sweet Crumbs – Freshly Baked Happiness, Every Day!</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/bakery-logo.svg">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#home" class="brand-logo" aria-label="Sweet Crumbs Home">
+        <img src="assets/bakery-logo.svg" alt="Sweet Crumbs Bakery Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">Sweet Crumbs</span>
+          <span class="brand-tag">Artisan Bakery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Action Button (Desktop) -->
+      <div class="header-action">
+        <a href="#contact" class="btn btn-outline nav-cta">Send Enquiry</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navList">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span> Oven-Fresh Quality Guaranteed
+          </div>
+          <h1 class="hero-title">
+            Freshly Baked Happiness, <span class="highlight-text">Every Day!</span>
+          </h1>
+          <p class="hero-description">
+            Welcome to Sweet Crumbs, where every cake, golden croissant, and artisan cookie is handcrafted with premium ingredients, pure butter, and time-honored recipes. Indulge in warm, freshly baked joy straight from our kitchen to your table.
+          </p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">
+              <span>Explore Our Products</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Us</span>
+            </a>
+          </div>
+          
+          <!-- Quick Trust Badges -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Pure Ingredients</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Daily</span>
+              <span class="stat-label">Fresh Batches</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">₹0</span>
+              <span class="stat-label">Preservatives</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-wrapper">
+            <img src="assets/hero-bakery.svg" alt="Assortment of freshly baked Sweet Crumbs cakes, pastries, and bread" class="hero-img">
+            <div class="floating-badge badge-morning">
+              <span class="badge-icon">🥐</span>
+              <div>
+                <strong>Baked at Dawn</strong>
+                <small>Fresh from oven</small>
+              </div>
+            </div>
+            <div class="floating-badge badge-rating">
+              <span class="badge-icon">⭐</span>
+              <div>
+                <strong>4.9 / 5 Rating</strong>
+                <small>College Favorite</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCTS SECTION ==================== -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Handcrafted Menu</span>
+          <h2 class="section-title">Our Bakery Specialties</h2>
+          <p class="section-subtitle">
+            Explore our mouthwatering selection of fresh cakes, flaky croissants, warm rolls, and decadent cookies. Sourced directly from our backend REST API.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filters" id="categoryFilters" role="tablist" aria-label="Product categories">
+          <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">All Products</button>
+          <button class="filter-btn" data-category="Cakes" role="tab" aria-selected="false">Cakes</button>
+          <button class="filter-btn" data-category="Pastries" role="tab" aria-selected="false">Pastries</button>
+          <button class="filter-btn" data-category="Muffins" role="tab" aria-selected="false">Muffins</button>
+          <button class="filter-btn" data-category="Cupcakes" role="tab" aria-selected="false">Cupcakes</button>
+          <button class="filter-btn" data-category="Cheesecakes" role="tab" aria-selected="false">Cheesecakes</button>
+          <button class="filter-btn" data-category="Cookies" role="tab" aria-selected="false">Cookies</button>
+        </div>
+
+        <!-- Loading State Indicator -->
+        <div class="loading-state" id="productsLoading" aria-live="polite">
+          <div class="spinner"></div>
+          <p>Fetching freshly baked goods from the Sweet Crumbs API...</p>
+        </div>
+
+        <!-- Error State Container (with Retry button) -->
+        <div class="error-state hidden" id="productsError" role="alert">
+          <div class="error-icon">⚠️</div>
+          <h3>Oops! Unable to load bakery products</h3>
+          <p id="errorMessage">Could not connect to the Sweet Crumbs backend API. Please make sure the server is running.</p>
+          <button class="btn btn-primary" id="retryProductsBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+            <span>Try Again</span>
+          </button>
+        </div>
+
+        <!-- Products Responsive Grid -->
+        <div class="products-grid hidden" id="productsGrid" role="region" aria-label="Bakery Products List">
+          <!-- Dynamically populated by script.js via GET /products -->
+        </div>
+
+        <!-- Empty Filter Result -->
+        <div class="empty-filter-state hidden" id="emptyFilterState">
+          <p>No bakery products found under this category.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+        <div class="about-media">
+          <div class="about-card-banner">
+            <img src="assets/chocolate-cake.svg" alt="Sweet Crumbs Baker Special Chocolate Cake" class="about-img">
+            <div class="about-experience-badge">
+              <span class="exp-number">10+</span>
+              <span class="exp-text">Years of Artisan Baking Craft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">Our Bakery Story</span>
+          <h2 class="section-title">Baking Smiles, One Crumb At A Time</h2>
+          <p class="about-lead">
+            Sweet Crumbs is a neighborhood artisan bakery committed to bringing wholesome, fresh-baked happiness to your everyday life.
+          </p>
+          <p class="about-text">
+            From sunrise every morning, our master bakers fold butter into flaky dough, simmer fresh strawberry glazes, and whip rich Belgian chocolate ganache. We believe that real bakery treats should be made with pure dairy butter, unbleached flour, farm-fresh eggs, and zero artificial preservatives.
+          </p>
+          <p class="about-text">
+            Whether you are celebrating a graduation milestone, catching up with friends over warm cinnamon rolls, or craving an afternoon chocolate chip cookie, Sweet Crumbs is your welcoming sweet haven.
+          </p>
+
+          <!-- Core Values Features Grid -->
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon">✨</div>
+              <div class="feature-info">
+                <h4>100% Fresh Daily</h4>
+                <p>Everything is baked from scratch every morning.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🍫</div>
+              <div class="feature-info">
+                <h4>Belgian Chocolate</h4>
+                <p>Premium cocoa blends for unmatched indulgence.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🌾</div>
+              <div class="feature-info">
+                <h4>Pure Dairy Butter</h4>
+                <p>No trans fats or margarine — only natural butter.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">❤️</div>
+              <div class="feature-info">
+                <h4>Crafted with Passion</h4>
+                <p>Time-tested recipes perfected for your delight.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT & CUSTOMER ENQUIRY SECTION ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Send a Bakery Enquiry</h2>
+          <p class="section-subtitle">
+            Have a custom cake inquiry, bulk party order, or dietary question? Fill out the form below and our team will get back to you promptly!
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Contact Information Card -->
+          <div class="contact-info-card">
+            <h3>Visit or Call Us</h3>
+            <p class="info-intro">
+              Drop by our bakery shop to savor fresh aromas or contact us for catering and special occasions.
+            </p>
+
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Bakery Address</strong>
+                  <p>123 Baker's Street, Confectionery Lane, Mumbai, Maharashtra 400001</p>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>Phone Number</strong>
+                  <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="info-icon">✉️</span>
+                <div>
+                  <strong>Email Address</strong>
+                  <p><a href="mailto:hello@sweetcrumbs.demo">hello@sweetcrumbs.demo</a></p>
+                </div>
+              </li>
+              <li class="info-item">
+                <span class="info-icon">⏰</span>
+                <div>
+                  <strong>Bakery Hours</strong>
+                  <p>Monday – Sunday: 8:00 AM – 10:00 PM</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Demo Note -->
+            <div class="demo-disclaimer-box">
+              <span class="disclaimer-badge">College Practical Demo</span>
+              <p>
+                Enquiries submitted through this form are sent to the backend <code>POST /enquiries</code> REST endpoint and stored in server RAM for demonstration. They clear when the server restarts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <!-- Success Message Notification -->
+            <div class="form-alert alert-success hidden" id="formSuccessAlert" role="alert">
+              <div class="alert-icon">🎉</div>
+              <div class="alert-body">
+                <strong>Enquiry Received!</strong>
+                <p id="successAlertMessage">Thank you! Your enquiry has been received. Our bakers will contact you shortly.</p>
+              </div>
+            </div>
+
+            <!-- Error Message Notification -->
+            <div class="form-alert alert-error hidden" id="formErrorAlert" role="alert">
+              <div class="alert-icon">⚠️</div>
+              <div class="alert-body">
+                <strong>Submission Failed</strong>
+                <p id="errorAlertMessage">Please verify the input fields and try again.</p>
+              </div>
+            </div>
+
+            <form id="enquiryForm" class="enquiry-form" novalidate>
+              <!-- Full Name (Required) -->
+              <div class="form-group" id="group-name">
+                <label for="fullName">Full Name <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="fullName" 
+                    name="name" 
+                    placeholder="e.g. Aditi Sharma" 
+                    required 
+                    autocomplete="name"
+                    aria-required="true"
+                    aria-describedby="nameError">
+                </div>
+                <span class="field-error-msg" id="nameError" role="alert"></span>
+              </div>
+
+              <!-- Email Address (Required) -->
+              <div class="form-group" id="group-email">
+                <label for="emailAddress">Email Address <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <input 
+                    type="email" 
+                    id="emailAddress" 
+                    name="email" 
+                    placeholder="e.g. aditi@example.com" 
+                    required 
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="emailError">
+                </div>
+                <span class="field-error-msg" id="emailError" role="alert"></span>
+              </div>
+
+              <!-- Phone Number (Optional) -->
+              <div class="form-group" id="group-phone">
+                <label for="phoneNumber">Phone Number <span class="optional-label">(Optional)</span></label>
+                <div class="input-wrapper">
+                  <input 
+                    type="tel" 
+                    id="phoneNumber" 
+                    name="phone" 
+                    placeholder="e.g. +91 9876543210" 
+                    autocomplete="tel"
+                    aria-describedby="phoneError">
+                </div>
+                <span class="field-error-msg" id="phoneError" role="alert"></span>
+              </div>
+
+              <!-- Product of Interest (Optional dropdown) -->
+              <div class="form-group" id="group-product">
+                <label for="productOfInterest">Product of Interest <span class="optional-label">(Optional)</span></label>
+                <div class="input-wrapper select-wrapper">
+                  <select id="productOfInterest" name="productOfInterest">
+                    <option value="">-- Select a product or general enquiry --</option>
+                    <option value="General Enquiry">General Bakery Enquiry</option>
+                    <option value="Chocolate Cake">Chocolate Cake (₹550)</option>
+                    <option value="Red Velvet Cake">Red Velvet Cake (₹650)</option>
+                    <option value="Butter Croissant">Butter Croissant (₹120)</option>
+                    <option value="Blueberry Muffin">Blueberry Muffin (₹90)</option>
+                    <option value="Chocolate Cupcake">Chocolate Cupcake (₹80)</option>
+                    <option value="Strawberry Cheesecake">Strawberry Cheesecake (₹180)</option>
+                    <option value="Cinnamon Roll">Cinnamon Roll (₹110)</option>
+                    <option value="Chocolate Chip Cookies">Chocolate Chip Cookies (₹150)</option>
+                    <option value="Custom Cake Order">Custom Birthday / Wedding Cake</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message (Required) -->
+              <div class="form-group" id="group-message">
+                <label for="enquiryMessage">Your Message <span class="required-star">*</span></label>
+                <div class="input-wrapper">
+                  <textarea 
+                    id="enquiryMessage" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Tell us what you would like to know or order..." 
+                    required 
+                    aria-required="true"
+                    aria-describedby="messageError"></textarea>
+                </div>
+                <span class="field-error-msg" id="messageError" role="alert"></span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block" id="submitEnquiryBtn">
+                <span class="btn-text">Submit Enquiry</span>
+                <span class="btn-spinner hidden" aria-hidden="true"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <!-- Footer Brand Column -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo">
+          <img src="assets/bakery-logo.svg" alt="Sweet Crumbs Logo" class="brand-icon">
+          <span class="brand-title">Sweet Crumbs</span>
+        </div>
+        <p class="footer-tagline">
+          Freshly baked happiness, handcrafted daily with premium ingredients and time-honored artisanal tradition.
+        </p>
+        <div class="demo-tag">College Assignment Demo Project</div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Bakery Products</a></li>
+          <li><a href="#about">About Our Story</a></li>
+          <li><a href="#contact">Contact & Enquiry</a></li>
+        </ul>
+      </div>
+
+      <!-- REST API Endpoints Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">REST API Endpoints</h4>
+        <ul class="footer-links">
+          <li><a href="/products" target="_blank" rel="noopener"><code>GET /products</code> (JSON)</a></li>
+          <li><a href="/health" target="_blank" rel="noopener"><code>GET /health</code> (Status)</a></li>
+          <li><a href="/enquiries" target="_blank" rel="noopener"><code>GET /enquiries</code> (Memory List)</a></li>
+          <li><a href="#contact"><code>POST /enquiries</code> (Submit)</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact Information</h4>
+        <p class="footer-contact-item"><strong>Address:</strong> 123 Baker's Street, Mumbai 400001</p>
+        <p class="footer-contact-item"><strong>Phone:</strong> +91 98765 43210</p>
+        <p class="footer-contact-item"><strong>Email:</strong> hello@sweetcrumbs.demo</p>
+        <p class="footer-contact-item"><strong>Timings:</strong> 8:00 AM – 10:00 PM (Daily)</p>
+      </div>
+    </div>
+
+    <!-- Copyright Sub-Footer -->
+    <div class="footer-bottom">
+      <div class="container bottom-flex">
+        <p>© <span id="currentYear">2026</span> Sweet Crumbs Bakery. All rights reserved.</p>
+        <p class="tech-stack-tag">Built with HTML5, CSS3, Vanilla JavaScript &amp; Express.js REST API</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+

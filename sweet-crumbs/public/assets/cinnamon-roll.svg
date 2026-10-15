@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBF5"/>
+      <stop offset="100%" stop-color="#FCEFD8"/>
+    </linearGradient>
+    <linearGradient id="cinnamon-dough" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F4A261"/>
+      <stop offset="100%" stop-color="#C57B43"/>
+    </linearGradient>
+    <linearGradient id="cinnamon-spice" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#582F0E"/>
+      <stop offset="100%" stop-color="#7F4F24"/>
+    </linearGradient>
+    <linearGradient id="vanilla-icing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFFDF7"/>
+    </linearGradient>
+    <filter id="cin-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#4B270C" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#cr-bg)"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="245" rx="110" ry="16" fill="#D3B89E" opacity="0.4"/>
+
+  <g filter="url(#cin-shadow)">
+    <!-- Base Bun Body -->
+    <ellipse cx="200" cy="180" rx="95" ry="55" fill="url(#cinnamon-dough)"/>
+    <path d="M105 180 C105 220 295 220 295 180 L295 210 C295 245 105 245 105 210 Z" fill="#A86230"/>
+
+    <!-- Cinnamon Spirals -->
+    <!-- Spiral Ring 1 -->
+    <path d="M115 180 C115 140 285 140 285 180 C285 210 125 210 125 180 C125 155 265 155 265 180 C265 195 145 195 145 180 C145 168 245 168 245 180 C245 188 165 188 165 180 C165 174 220 174 220 180" 
+          stroke="url(#cinnamon-spice)" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+    <!-- Vanilla Glaze Icing running across -->
+    <path d="M130 160 Q170 145 220 155 Q270 165 260 180 Q210 195 160 185 Q135 180 130 160 Z" fill="url(#vanilla-icing)" opacity="0.9"/>
+    
+    <!-- Glaze drips over the edge -->
+    <path d="M130 175 Q125 205 130 215 Q135 205 140 185" fill="#FFFFFF"/>
+    <path d="M190 195 Q185 230 192 235 Q198 220 205 198" fill="#FFFFFF"/>
+    <path d="M250 185 Q260 215 265 220 Q270 205 265 180" fill="#FFFFFF"/>
+
+    <!-- Cinnamon powder dust on top -->
+    <circle cx="170" cy="165" r="1.5" fill="#582F0E"/>
+    <circle cx="180" cy="155" r="1.2" fill="#582F0E"/>
+    <circle cx="210" cy="170" r="1.5" fill="#582F0E"/>
+    <circle cx="230" cy="160" r="1.2" fill="#582F0E"/>
+    <circle cx="205" cy="185" r="1.5" fill="#582F0E"/>
+  </g>
+</svg>
+

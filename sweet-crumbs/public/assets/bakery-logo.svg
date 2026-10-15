@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCCD5"/>
+      <stop offset="100%" stop-color="#F48FB1"/>
+    </linearGradient>
+    <linearGradient id="hat-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#F5EBE1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular background badge -->
+  <circle cx="50" cy="50" r="46" fill="#4A2511"/>
+  <circle cx="50" cy="50" r="41" fill="#FFFDF9"/>
+  <circle cx="50" cy="50" r="38" fill="url(#logo-grad)" opacity="0.25"/>
+
+  <!-- Chef Hat / Bakery Cupcake Motif -->
+  <!-- Chef hat puffs -->
+  <circle cx="37" cy="40" r="14" fill="#4A2511"/>
+  <circle cx="63" cy="40" r="14" fill="#4A2511"/>
+  <circle cx="50" cy="32" r="16" fill="#4A2511"/>
+
+  <circle cx="37" cy="40" r="11" fill="url(#hat-grad)"/>
+  <circle cx="63" cy="40" r="11" fill="url(#hat-grad)"/>
+  <circle cx="50" cy="32" r="13" fill="url(#hat-grad)"/>
+
+  <!-- Hat band / bread base -->
+  <rect x="32" y="48" width="36" height="12" rx="4" fill="#4A2511"/>
+  <rect x="34" y="50" width="32" height="8" rx="2" fill="#D4A373"/>
+
+  <!-- Golden Wheat Stems -->
+  <path d="M26 62 Q32 68 38 64" stroke="#D4A373" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M74 62 Q68 68 62 64" stroke="#D4A373" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="50" cy="68" r="3" fill="#C9184A"/>
+</svg>
+

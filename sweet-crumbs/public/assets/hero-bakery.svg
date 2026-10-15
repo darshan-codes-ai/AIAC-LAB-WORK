@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="50%" stop-color="#FCEEE3"/>
+      <stop offset="100%" stop-color="#F8D7DA"/>
+    </linearGradient>
+    <radialGradient id="sun-glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFE5D9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFFDF9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hero-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#4A2511" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" rx="24" fill="url(#hero-bg)"/>
+  <circle cx="400" cy="300" r="280" fill="url(#sun-glow)"/>
+
+  <!-- Bakery Counter Table -->
+  <ellipse cx="400" cy="480" rx="360" ry="60" fill="#E8D5C4" opacity="0.4"/>
+  <rect x="50" y="460" width="700" height="25" rx="12" fill="#DDB892"/>
+  <rect x="70" y="480" width="660" height="15" rx="6" fill="#B08968" opacity="0.6"/>
+
+  <!-- Central Tiered Cake -->
+  <g filter="url(#hero-shadow)">
+    <!-- Cake Base Stand -->
+    <ellipse cx="400" cy="460" rx="130" ry="20" fill="#FAF0E6"/>
+    <path d="M380 460 L370 510 L430 510 L420 460 Z" fill="#E2CFBE"/>
+    <ellipse cx="400" cy="510" rx="70" ry="12" fill="#D4BEAA"/>
+
+    <!-- Bottom Tier -->
+    <path d="M290 380 C290 350 510 350 510 380 L510 440 C510 465 290 465 290 440 Z" fill="#6F3F1F"/>
+    <ellipse cx="400" cy="380" rx="110" ry="20" fill="#FFE5D9"/>
+    <!-- Frosting drip -->
+    <path d="M290 380 Q320 415 350 380 Q380 425 410 380 Q450 420 480 380 Q495 400 510 380" fill="#FFE5D9"/>
+
+    <!-- Top Tier -->
+    <path d="M330 300 C330 275 470 275 470 300 L470 360 C470 380 330 380 330 360 Z" fill="#C9184A"/>
+    <ellipse cx="400" cy="300" rx="70" ry="15" fill="#FFF0F3"/>
+
+    <!-- Cherries & Sparkles -->
+    <circle cx="400" cy="275" r="16" fill="#A81830"/>
+    <circle cx="395" cy="270" r="4" fill="#FF758F"/>
+    <path d="M400 260 Q420 230 435 240" stroke="#4A2511" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Macarons / Berries around cake -->
+    <circle cx="360" cy="290" r="12" fill="#F4A261"/>
+    <circle cx="440" cy="290" r="12" fill="#2A9D8F"/>
+  </g>
+
+  <!-- Left: Fresh Croissant & Artisan Bread -->
+  <g filter="url(#hero-shadow)" transform="translate(40, 20)">
+    <!-- Cutting Board -->
+    <rect x="70" y="410" width="160" height="90" rx="12" fill="#E6CCB2" transform="rotate(-5 150 455)"/>
+    
+    <!-- Croissant -->
+    <ellipse cx="140" cy="430" rx="45" ry="24" fill="#E76F51" transform="rotate(-15 140 430)"/>
+    <ellipse cx="140" cy="428" rx="35" ry="16" fill="#F4A261" transform="rotate(-15 140 430)"/>
+    <path d="M110 435 Q140 420 170 430" stroke="#FFE8D6" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Right: Cupcake & Cookies -->
+  <g filter="url(#hero-shadow)">
+    <!-- Cupcake -->
+    <path d="M600 400 L610 460 L670 460 L680 400 Z" fill="#FFB5A7"/>
+    <ellipse cx="640" cy="400" rx="40" ry="12" fill="#4A2511"/>
+    <!-- Swirl -->
+    <path d="M610 400 C600 360 680 360 670 400 Z" fill="#FFCCD5"/>
+    <path d="M620 370 C615 335 665 335 660 370 Z" fill="#FFCCD5"/>
+    <circle cx="640" cy="328" r="8" fill="#C9184A"/>
+
+    <!-- Cookie beside cupcake -->
+    <circle cx="560" cy="455" r="32" fill="#D4A373"/>
+    <circle cx="550" cy="445" r="5" fill="#3D1D09"/>
+    <circle cx="570" cy="450" r="4" fill="#3D1D09"/>
+    <circle cx="560" cy="465" r="5" fill="#3D1D09"/>
+    <circle cx="545" cy="460" r="4" fill="#3D1D09"/>
+  </g>
+
+  <!-- Floating Steam / Aroma swirls -->
+  <path d="M370 210 Q360 170 380 140 Q400 110 390 80" stroke="#E29578" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-dasharray="6,8" opacity="0.7"/>
+  <path d="M430 220 Q440 180 420 150 Q400 120 420 90" stroke="#E29578" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-dasharray="6,8" opacity="0.7"/>
+
+  <!-- Bakery Badge -->
+  <g transform="translate(620, 70)">
+    <circle cx="50" cy="50" r="48" fill="#4A2511"/>
+    <circle cx="50" cy="50" r="43" fill="#FFFDF9"/>
+    <text x="50" y="44" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="13" fill="#C9184A" text-anchor="middle" letter-spacing="1">100% FRESH</text>
+    <text x="50" y="62" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="10" fill="#4A2511" text-anchor="middle">BAKED DAILY</text>
+    <circle cx="50" cy="74" r="3" fill="#E76F51"/>
+  </g>
+</svg>
+

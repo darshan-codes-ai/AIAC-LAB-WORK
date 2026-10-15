@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2B48"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <filter id="eduShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- Decorative Background Grid & Circles -->
+  <g opacity="0.15">
+    <circle cx="400" cy="300" r="260" stroke="#38BDF8" stroke-width="2" fill="none" stroke-dasharray="6,6"/>
+    <circle cx="400" cy="300" r="340" stroke="#38BDF8" stroke-width="1.5" fill="none"/>
+    <line x1="100" y1="150" x2="700" y2="150" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="100" y1="450" x2="700" y2="450" stroke="#38BDF8" stroke-width="1"/>
+  </g>
+
+  <!-- Central Desk / Tech Surface -->
+  <ellipse cx="400" cy="490" rx="340" ry="45" fill="#0A192F" opacity="0.6"/>
+
+  <!-- Stack of Academic Textbooks (Left Side) -->
+  <g filter="url(#eduShadow)">
+    <!-- Book 1 (Bottom) -->
+    <rect x="140" y="440" width="180" height="28" rx="6" fill="#0284C7"/>
+    <rect x="150" y="444" width="160" height="20" rx="3" fill="#E2E8F0"/>
+    <rect x="140" y="440" width="24" height="28" rx="4" fill="#0369A1"/>
+
+    <!-- Book 2 (Middle) -->
+    <rect x="150" y="408" width="165" height="28" rx="6" fill="#38BDF8"/>
+    <rect x="160" y="412" width="145" height="20" rx="3" fill="#F8FAFC"/>
+    <rect x="150" y="408" width="22" height="28" rx="4" fill="#0284C7"/>
+
+    <!-- Book 3 (Top) -->
+    <rect x="165" y="376" width="140" height="28" rx="6" fill="#F59E0B"/>
+    <rect x="175" y="380" width="120" height="20" rx="3" fill="#FFFBEB"/>
+    <rect x="165" y="376" width="20" height="28" rx="4" fill="#D97706"/>
+  </g>
+
+  <!-- Central Modern Laptop (Open with Code & Course Interface) -->
+  <g filter="url(#eduShadow)">
+    <!-- Laptop Base -->
+    <path d="M260 460 L540 460 L570 480 L230 480 Z" fill="#334155"/>
+    <rect x="360" y="462" width="80" height="6" rx="3" fill="#64748B"/>
+
+    <!-- Laptop Screen Bezel -->
+    <rect x="280" y="220" width="240" height="240" rx="12" fill="url(#laptopGrad)"/>
+    <!-- Screen Glass -->
+    <rect x="290" y="230" width="220" height="210" rx="8" fill="url(#screenGrad)"/>
+
+    <!-- IDE / Course Window Header -->
+    <rect x="290" y="230" width="220" height="22" rx="6" fill="#0C4A6E"/>
+    <circle cx="304" cy="241" r="3.5" fill="#EF4444"/>
+    <circle cx="316" cy="241" r="3.5" fill="#F59E0B"/>
+    <circle cx="328" cy="241" r="3.5" fill="#10B981"/>
+    <text x="360" y="245" font-family="'Segoe UI', monospace" font-size="9" fill="#E0F2FE" font-weight="600">CampusEnroll.edu</text>
+
+    <!-- Code & Learning Visuals on Screen -->
+    <rect x="305" y="265" width="80" height="8" rx="3" fill="#38BDF8"/>
+    <rect x="305" y="280" width="120" height="6" rx="2" fill="#BAE6FD" opacity="0.8"/>
+    <rect x="305" y="292" width="150" height="6" rx="2" fill="#BAE6FD" opacity="0.6"/>
+    <rect x="305" y="304" width="95" height="6" rx="2" fill="#BAE6FD" opacity="0.8"/>
+
+    <!-- Course Card Preview on Screen -->
+    <rect x="305" y="325" width="190" height="70" rx="6" fill="#082F49" opacity="0.9"/>
+    <rect x="315" y="335" width="100" height="8" rx="3" fill="#38BDF8"/>
+    <rect x="315" y="348" width="170" height="5" rx="2" fill="#93C5FD"/>
+    <rect x="315" y="357" width="140" height="5" rx="2" fill="#93C5FD"/>
+    <rect x="315" y="372" width="60" height="14" rx="4" fill="#38BDF8"/>
+  </g>
+
+  <!-- Big Graduation Mortarboard Floating Above Laptop -->
+  <g filter="url(#eduShadow)" transform="translate(400, 150)">
+    <!-- Cap Diamond -->
+    <polygon points="0,-45 110,0 0,45 -110,0" fill="#1E293B" stroke="#38BDF8" stroke-width="3"/>
+    <!-- Inner Diamond Contour -->
+    <polygon points="0,-36 90,0 0,36 -90,0" fill="#0F172A"/>
+
+    <!-- Skull Cap Underneath -->
+    <path d="M-55 12 L-55 45 C-55 70 55 70 55 45 L55 12" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+
+    <!-- Golden Tassel -->
+    <path d="M75 10 L85 60 L92 60" stroke="#FBBF24" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <circle cx="92" cy="62" r="4.5" fill="#F59E0B"/>
+    <circle cx="0" cy="0" r="6" fill="#38BDF8"/>
+  </g>
+
+  <!-- Floating Achievement Certificate (Right Side) -->
+  <g filter="url(#eduShadow)" transform="translate(560, 260) rotate(8)">
+    <rect x="0" y="0" width="150" height="190" rx="10" fill="#FFFFFF"/>
+    <rect x="6" y="6" width="138" height="178" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Certificate Header & Emblem -->
+    <circle cx="75" cy="40" r="18" fill="url(#cyanGlow)"/>
+    <polygon points="75,32 78,38 84,39 80,44 81,50 75,47 70,50 71,44 67,39 73,38" fill="#FFFFFF"/>
+
+    <!-- Certificate Lines -->
+    <rect x="30" y="70" width="90" height="8" rx="3" fill="#1E293B"/>
+    <rect x="40" y="86" width="70" height="5" rx="2" fill="#64748B"/>
+    <rect x="25" y="105" width="100" height="4" rx="2" fill="#94A3B8"/>
+    <rect x="25" y="115" width="100" height="4" rx="2" fill="#94A3B8"/>
+    <rect x="35" y="125" width="80" height="4" rx="2" fill="#94A3B8"/>
+
+    <!-- Certificate Seal Ribbon -->
+    <circle cx="75" cy="155" r="12" fill="#F59E0B"/>
+    <path d="M70 162 L66 178 L75 172 L84 178 L80 162 Z" fill="#D97706"/>
+  </g>
+
+  <!-- Floating Learning Badges -->
+  <g filter="url(#eduShadow)" transform="translate(100, 200)">
+    <rect x="0" y="0" width="130" height="52" rx="12" fill="rgba(15, 43, 72, 0.9)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="20" y="32" font-size="20">⚡</text>
+    <text x="50" y="24" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF">100% Online</text>
+    <text x="50" y="38" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="9" fill="#94A3B8">Flexible Study</text>
+  </g>
+
+  <g filter="url(#eduShadow)" transform="translate(560, 470)">
+    <rect x="0" y="0" width="140" height="52" rx="12" fill="rgba(15, 43, 72, 0.9)" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="18" y="32" font-size="20">🎓</text>
+    <text x="48" y="24" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF">Certified</text>
+    <text x="48" y="38" font-family="'Segoe UI', sans-serif" font-weight="500" font-size="9" fill="#94A3B8">Recognized Skills</text>
+  </g>
+</svg>
+

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cookie-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF8"/>
+      <stop offset="100%" stop-color="#F9EEDA"/>
+    </linearGradient>
+    <linearGradient id="cookie-dough" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E9C46A"/>
+      <stop offset="70%" stop-color="#D4A373"/>
+      <stop offset="100%" stop-color="#A97142"/>
+    </linearGradient>
+    <filter id="ck-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#4B270C" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#cookie-bg)"/>
+
+  <!-- Shadow for back cookie -->
+  <ellipse cx="260" cy="200" rx="70" ry="15" fill="#D3B89E" opacity="0.4"/>
+  <!-- Back Cookie -->
+  <g filter="url(#ck-shadow)" transform="rotate(15 250 170)">
+    <circle cx="250" cy="170" r="65" fill="url(#cookie-dough)"/>
+    <!-- Chocolate Chips on back cookie -->
+    <ellipse cx="230" cy="140" rx="9" ry="7" fill="#3D1D09" transform="rotate(25 230 140)"/>
+    <ellipse cx="270" cy="150" rx="8" ry="6" fill="#3D1D09" transform="rotate(-15 270 150)"/>
+    <ellipse cx="235" cy="180" rx="10" ry="8" fill="#3D1D09" transform="rotate(10 235 180)"/>
+    <ellipse cx="275" cy="190" rx="8" ry="7" fill="#3D1D09" transform="rotate(45 275 190)"/>
+    <ellipse cx="255" cy="170" rx="7" ry="6" fill="#3D1D09"/>
+  </g>
+
+  <!-- Shadow for front cookie -->
+  <ellipse cx="160" cy="245" rx="85" ry="16" fill="#CBB298" opacity="0.5"/>
+  <!-- Front Cookie -->
+  <g filter="url(#ck-shadow)">
+    <!-- Irregular organic cookie outline -->
+    <path d="M100 180 C95 140 130 110 170 110 C215 105 240 135 245 175 C248 215 210 245 170 245 C125 242 105 215 100 180 Z" fill="url(#cookie-dough)"/>
+
+    <!-- Chocolate Chips (chunky melted drops) -->
+    <ellipse cx="140" cy="145" rx="11" ry="9" fill="#2E1303" transform="rotate(15 140 145)"/>
+    <ellipse cx="138" cy="143" rx="4" ry="2" fill="#5A2E12" transform="rotate(15 138 143)"/>
+
+    <ellipse cx="190" cy="135" rx="13" ry="10" fill="#2E1303" transform="rotate(-20 190 135)"/>
+    <ellipse cx="188" cy="133" rx="5" ry="3" fill="#5A2E12" transform="rotate(-20 188 133)"/>
+
+    <ellipse cx="165" cy="175" rx="14" ry="11" fill="#2E1303" transform="rotate(35 165 175)"/>
+    <ellipse cx="163" cy="173" rx="5" ry="3" fill="#5A2E12" transform="rotate(35 163 173)"/>
+
+    <ellipse cx="130" cy="195" rx="12" ry="9" fill="#2E1303" transform="rotate(-10 130 195)"/>
+    <ellipse cx="205" cy="180" rx="11" ry="8" fill="#2E1303" transform="rotate(20 205 180)"/>
+
+    <ellipse cx="170" cy="215" rx="10" ry="7" fill="#2E1303" transform="rotate(-15 170 215)"/>
+    <ellipse cx="215" cy="210" rx="8" ry="6" fill="#2E1303"/>
+
+    <!-- Crack / texture marks -->
+    <path d="M150 125 Q160 130 165 122" stroke="#A97142" stroke-width="2" fill="none"/>
+    <path d="M120 165 Q130 170 128 178" stroke="#A97142" stroke-width="2" fill="none"/>
+    <path d="M185 195 Q195 200 190 210" stroke="#A97142" stroke-width="2" fill="none"/>
+    <path d="M210 155 Q220 160 218 168" stroke="#A97142" stroke-width="2" fill="none"/>
+  </g>
+</svg>
+

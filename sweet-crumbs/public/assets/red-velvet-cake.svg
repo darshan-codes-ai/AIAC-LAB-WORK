@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rv-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F3"/>
+      <stop offset="100%" stop-color="#FFCCD5"/>
+    </linearGradient>
+    <linearGradient id="velvet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A81830"/>
+      <stop offset="100%" stop-color="#730F20"/>
+    </linearGradient>
+    <linearGradient id="creamcheese" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFF8E7"/>
+    </linearGradient>
+    <filter id="rv-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#5E0011" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="300" rx="16" fill="url(#rv-bg)"/>
+
+  <!-- Plate -->
+  <ellipse cx="200" cy="245" rx="110" ry="14" fill="#EAD5D5" opacity="0.6"/>
+  <ellipse cx="200" cy="240" rx="95" ry="10" fill="#FFFFFF"/>
+
+  <g filter="url(#rv-shadow)">
+    <!-- Base Layer -->
+    <path d="M120 180 C120 160 280 160 280 180 L280 220 C280 235 120 235 120 220 Z" fill="url(#velvet)"/>
+    
+    <!-- White Frosting Center -->
+    <ellipse cx="200" cy="180" rx="80" ry="12" fill="url(#creamcheese)"/>
+    <path d="M120 180 Q140 190 160 180 Q180 190 200 180 Q220 190 240 180 Q260 190 280 180" stroke="#FFF8E7" stroke-width="8" fill="none"/>
+
+    <!-- Top Sponge Layer -->
+    <path d="M125 140 C125 120 275 120 275 140 L275 180 C275 195 125 195 125 180 Z" fill="url(#velvet)"/>
+
+    <!-- Top Frosting Swirls -->
+    <ellipse cx="200" cy="140" rx="75" ry="12" fill="url(#creamcheese)"/>
+    <path d="M130 140 C140 120 160 120 170 140 C180 120 200 120 210 140 C220 120 240 120 250 140 C260 120 270 135 270 140" fill="url(#creamcheese)"/>
+
+    <!-- Frosting Rosettes -->
+    <circle cx="160" cy="130" r="10" fill="#FFFFFF" stroke="#FDE8EA" stroke-width="3"/>
+    <circle cx="200" cy="125" r="12" fill="#FFFFFF" stroke="#FDE8EA" stroke-width="3"/>
+    <circle cx="240" cy="130" r="10" fill="#FFFFFF" stroke="#FDE8EA" stroke-width="3"/>
+
+    <!-- Red Velvet Crumbs sprinkle -->
+    <circle cx="175" cy="132" r="2.5" fill="#A81830"/>
+    <circle cx="185" cy="138" r="2" fill="#A81830"/>
+    <circle cx="215" cy="135" r="3" fill="#A81830"/>
+    <circle cx="225" cy="128" r="2" fill="#A81830"/>
+    <circle cx="195" cy="142" r="2.5" fill="#A81830"/>
+    <circle cx="145" cy="140" r="2" fill="#A81830"/>
+    <circle cx="255" cy="140" r="2" fill="#A81830"/>
+  </g>
+</svg>
+

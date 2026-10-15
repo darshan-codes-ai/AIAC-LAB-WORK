@@ -1,0 +1,23 @@
+{
+  "name": "sweet-crumbs-bakery",
+  "version": "1.0.0",
+  "description": "Sweet Crumbs - Modern Online Bakery Website and REST API for College Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [
+    "bakery",
+    "express",
+    "rest-api",
+    "vanilla-javascript",
+    "responsive-design"
+  ],
+  "author": "College Student",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+
