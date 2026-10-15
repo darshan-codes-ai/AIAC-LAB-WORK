@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A2E26"/>
+      <stop offset="50%" stop-color="#12241D"/>
+      <stop offset="100%" stop-color="#0B1A14"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1A2E26" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" rx="24" fill="url(#heroBg)"/>
+  <circle cx="400" cy="280" r="320" fill="url(#lampGlow)"/>
+
+  <!-- Wooden Bookshelf Surface -->
+  <rect x="60" y="480" width="680" height="24" rx="6" fill="#854D0E"/>
+  <rect x="80" y="504" width="640" height="12" rx="4" fill="#583101" opacity="0.8"/>
+
+  <!-- Stacked Books on Shelf -->
+  <g filter="url(#bookShadow)">
+    <!-- Book 1 Horizontal Base -->
+    <rect x="120" y="445" width="220" height="34" rx="4" fill="#1E3A8A"/>
+    <rect x="130" y="449" width="200" height="26" rx="2" fill="#FAF5EF"/>
+    <rect x="120" y="445" width="28" height="34" rx="3" fill="#172554"/>
+    <text x="220" y="468" font-family="'Georgia', serif" font-size="12" fill="#E2E8F0" font-weight="bold">CLASSIC FICTION</text>
+
+    <!-- Book 2 Horizontal Middle -->
+    <rect x="135" y="412" width="200" height="32" rx="4" fill="#991B1B"/>
+    <rect x="145" y="416" width="180" height="24" rx="2" fill="#FAF5EF"/>
+    <rect x="135" y="412" width="26" height="32" rx="3" fill="#7F1D1D"/>
+    <text x="225" y="433" font-family="'Georgia', serif" font-size="11" fill="#FEE2E2" font-weight="bold">PHILOSOPHY</text>
+
+    <!-- Book 3 Horizontal Top -->
+    <rect x="150" y="380" width="180" height="31" rx="4" fill="#065F46"/>
+    <rect x="160" y="384" width="160" height="23" rx="2" fill="#FAF5EF"/>
+    <rect x="150" y="380" width="24" height="31" rx="3" fill="#064E3B"/>
+    <text x="220" y="401" font-family="'Georgia', serif" font-size="11" fill="#D1FAE5" font-weight="bold">MODERN HABITS</text>
+  </g>
+
+  <!-- Large Open Book in Center (Feature Piece) -->
+  <g filter="url(#bookShadow)" transform="translate(420, 270)">
+    <!-- Left Open Page -->
+    <path d="M-140 180 C-70 160 0 165 0 180 L0 -20 C-50 -35 -110 -30 -140 -20 Z" fill="#FDFBF7"/>
+    <!-- Right Open Page -->
+    <path d="M140 180 C70 160 0 165 0 180 L0 -20 C50 -35 110 -30 140 -20 Z" fill="#F4EFE6"/>
+
+    <!-- Spine Crease -->
+    <line x1="0" y1="-20" x2="0" y2="180" stroke="#D97706" stroke-width="3"/>
+
+    <!-- Text Lines on Left Page -->
+    <rect x="-120" y="10" width="100" height="5" rx="2" fill="#1E293B" opacity="0.7"/>
+    <rect x="-120" y="24" width="90" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="-120" y="38" width="95" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="-120" y="52" width="85" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="-120" y="66" width="100" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="-120" y="80" width="70" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+
+    <!-- Text Lines on Right Page -->
+    <rect x="20" y="10" width="95" height="5" rx="2" fill="#1E293B" opacity="0.7"/>
+    <rect x="20" y="24" width="85" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="20" y="38" width="100" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="20" y="52" width="90" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="20" y="66" width="95" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+    <rect x="20" y="80" width="60" height="5" rx="2" fill="#64748B" opacity="0.6"/>
+
+    <!-- Golden Ribbon Bookmark -->
+    <path d="M-6 -22 Q-10 60 12 195 L20 185 L28 195 Q6 60 6 -22 Z" fill="url(#goldAccent)"/>
+  </g>
+
+  <!-- Standing Books (Right Side of Shelf) -->
+  <g filter="url(#bookShadow)">
+    <rect x="620" y="300" width="30" height="180" rx="3" fill="#D97706"/>
+    <rect x="655" y="270" width="34" height="210" rx="3" fill="#1E3A8A"/>
+    <rect x="694" y="290" width="28" height="190" rx="3" fill="#4338CA"/>
+
+    <!-- Gold foil line details on spines -->
+    <line x1="622" y1="330" x2="648" y2="330" stroke="#FDE68A" stroke-width="2"/>
+    <line x1="657" y1="310" x2="687" y2="310" stroke="#FDE68A" stroke-width="2"/>
+    <line x1="696" y1="320" x2="720" y2="320" stroke="#FDE68A" stroke-width="2"/>
+  </g>
+
+  <!-- Cozy Reading Lamp / Glow Elements -->
+  <path d="M370 120 L430 120 L450 170 L350 170 Z" fill="#D97706" opacity="0.9"/>
+  <ellipse cx="400" cy="170" rx="50" ry="8" fill="#FDE68A"/>
+  <line x1="400" y1="0" x2="400" y2="120" stroke="#92400E" stroke-width="3"/>
+
+  <!-- Floating Floating Quote Pill -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="190" height="52" rx="12" fill="rgba(26, 46, 38, 0.85)" stroke="#D97706" stroke-width="1.5"/>
+    <text x="18" y="32" font-size="20">📖</text>
+    <text x="48" y="24" font-family="'Georgia', serif" font-weight="bold" font-size="12" fill="#FFFFFF">10+ Bestsellers</text>
+    <text x="48" y="40" font-family="'Segoe UI', sans-serif" font-size="10" fill="#CBD5E1">Handpicked Curations</text>
+  </g>
+</svg>
+

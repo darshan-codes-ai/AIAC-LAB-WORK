@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="coverBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A2E26"/>
+      <stop offset="50%" stop-color="#12241D"/>
+      <stop offset="100%" stop-color="#0B1A14"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Book Cover Base -->
+  <rect width="300" height="420" rx="10" fill="url(#coverBg)"/>
+
+  <!-- Book Spine Stitch Crease on left -->
+  <rect x="0" y="0" width="22" height="420" fill="#0E1713"/>
+  <line x1="22" y1="0" x2="22" y2="420" stroke="#263E34" stroke-width="2"/>
+
+  <!-- Ornate Decorative Frame -->
+  <rect x="36" y="24" width="238" height="372" rx="6" fill="none" stroke="url(#goldTrim)" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="42" y="30" width="226" height="360" rx="4" fill="none" stroke="url(#goldTrim)" stroke-width="0.75"/>
+
+  <!-- Book Emblem Icon -->
+  <circle cx="155" cy="140" r="38" fill="url(#goldTrim)" opacity="0.15"/>
+  <circle cx="155" cy="140" r="30" fill="none" stroke="url(#goldTrim)" stroke-width="1.5"/>
+  <text x="155" y="148" font-size="28" text-anchor="middle">📖</text>
+
+  <!-- Title & Typography Placeholder -->
+  <text x="155" y="225" font-family="'Georgia', serif" font-weight="bold" font-size="19" fill="#FAF7F2" text-anchor="middle" letter-spacing="1">BOOKNEST</text>
+  <text x="155" y="248" font-family="'Georgia', serif" font-style="italic" font-size="12" fill="#D97706" text-anchor="middle">Classic Edition</text>
+
+  <line x1="90" y1="270" x2="220" y2="270" stroke="url(#goldTrim)" stroke-width="1"/>
+
+  <!-- Decorative description lines -->
+  <rect x="80" y="300" width="150" height="4" rx="2" fill="#94A3B8" opacity="0.4"/>
+  <rect x="95" y="312" width="120" height="4" rx="2" fill="#94A3B8" opacity="0.4"/>
+
+  <!-- Bottom Crest -->
+  <text x="155" y="365" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#E2E8F0" text-anchor="middle" letter-spacing="2">LITERARY HERITAGE</text>
+</svg>
+

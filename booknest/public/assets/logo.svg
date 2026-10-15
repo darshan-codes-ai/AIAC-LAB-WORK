@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3038"/>
+      <stop offset="100%" stop-color="#0F231C"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Base Badge -->
+  <circle cx="50" cy="50" r="46" fill="url(#nestGrad)"/>
+  <circle cx="50" cy="50" r="41" fill="#FAF7F2"/>
+  <circle cx="50" cy="50" r="38" fill="url(#nestGrad)"/>
+
+  <!-- Open Book Silhouette -->
+  <!-- Pages Left -->
+  <path d="M25 65 C32 60 42 60 50 64 L50 36 C42 32 32 32 25 37 Z" fill="#FAF7F2"/>
+  <!-- Pages Right -->
+  <path d="M75 65 C68 60 58 60 50 64 L50 36 C58 32 68 32 75 37 Z" fill="#F3EBDD"/>
+
+  <!-- Book Spine Center -->
+  <line x1="50" y1="35" x2="50" y2="65" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Golden Bookmark Ribbon -->
+  <path d="M47 34 L47 48 L50 45 L53 48 L53 34 Z" fill="url(#goldGrad)"/>
+
+  <!-- Little Nest Leaves / Flourish Underneath -->
+  <path d="M30 73 Q50 82 70 73" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <circle cx="50" cy="78" r="2.5" fill="url(#goldGrad)"/>
+</svg>
+

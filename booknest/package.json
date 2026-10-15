@@ -1,0 +1,24 @@
+{
+  "name": "booknest-online-bookstore",
+  "version": "1.0.0",
+  "description": "BookNest - Modern Online Bookstore & REST API for College Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [
+    "bookstore",
+    "express",
+    "rest-api",
+    "vanilla-javascript",
+    "search",
+    "college-assignment"
+  ],
+  "author": "College Student",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+

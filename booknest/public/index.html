@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookNest - Modern Online Bookstore. Discover your next great read with title search and detailed book insights.">
+  <title>BookNest – Discover Your Next Great Read</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#home" class="brand-logo" aria-label="BookNest Bookstore Homepage">
+        <img src="assets/logo.svg" alt="BookNest Logo" class="brand-icon">
+        <div class="brand-text">
+          <span class="brand-title">BookNest</span>
+          <span class="brand-tag">Online Bookstore</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list" id="navList">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#catalog" class="nav-link">Browse Books</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-action">
+        <a href="#catalog" class="btn btn-primary nav-cta">Explore Catalog</a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navList">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">✨</span> Curated Literary Collection
+          </div>
+          <h1 class="hero-title">
+            Discover Your Next <span class="highlight-text">Great Read</span>
+          </h1>
+          <p class="hero-description">
+            Explore inspiring stories, timeless classics, and practical knowledge with BookNest. Search our curated titles, inspect comprehensive details, and find your next intellectual companion.
+          </p>
+
+          <!-- Prominent Search Bar (In Hero) -->
+          <div class="hero-search-wrapper" role="search" aria-label="Book Title Search">
+            <form id="searchForm" class="search-form" onsubmit="return false;">
+              <div class="search-input-group">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input 
+                  type="text" 
+                  id="searchInput" 
+                  class="search-input" 
+                  placeholder="Search books by title... (e.g. Alchemist, Habits, Code)" 
+                  aria-label="Search books by title"
+                  autocomplete="off">
+                <button type="button" id="clearSearchBtn" class="clear-btn hidden" aria-label="Clear search input">
+                  ✕
+                </button>
+                <button type="submit" id="searchBtn" class="btn btn-search">
+                  <span>Search</span>
+                </button>
+              </div>
+            </form>
+            <div class="search-hint">
+              <span>Tip: Press <kbd>Enter</kbd> to search or type partial titles like <em>"harry"</em>, <em>"clean"</em>, or <em>"money"</em>.</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-outline-hero">
+              <span>Browse All Books</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-wrapper">
+            <img src="assets/hero-books.svg" alt="Warm bookstore illustration with stacked books, library shelves and lamp" class="hero-img">
+            <div class="floating-badge badge-bestsellers">
+              <span class="badge-emoji">📚</span>
+              <div>
+                <strong>10+ Titles</strong>
+                <small>Fiction, Tech, Finance</small>
+              </div>
+            </div>
+            <div class="floating-badge badge-fast-api">
+              <span class="badge-emoji">⚡</span>
+              <div>
+                <strong>Instant Details</strong>
+                <small>GET /books/:id API</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOOK CATALOG SECTION ==================== -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Library Shelves</span>
+          <h2 class="section-title">Our Books Catalog</h2>
+          <p class="section-subtitle">
+            Browse through our handpicked collection of fiction, computer science, personal development, and financial literacy books. Loaded dynamically from the backend REST API.
+          </p>
+        </div>
+
+        <!-- Filter & Search Summary Bar -->
+        <div class="catalog-toolbar">
+          <div class="toolbar-left">
+            <span class="result-count" id="searchResultCount" aria-live="polite">
+              Loading catalog...
+            </span>
+          </div>
+          <div class="toolbar-right">
+            <button class="btn btn-sm btn-outline hidden" id="resetCatalogBtn">
+              Show All 10 Books
+            </button>
+          </div>
+        </div>
+
+        <!-- Loading State Indicator -->
+        <div class="state-card loading-state" id="booksLoading" aria-live="polite">
+          <div class="spinner"></div>
+          <p>Retrieving literary catalog from BookNest REST API...</p>
+        </div>
+
+        <!-- Error State Container (with Retry button) -->
+        <div class="state-card error-state hidden" id="booksError" role="alert">
+          <div class="state-icon">⚠️</div>
+          <h3>Unable to Load Books</h3>
+          <p id="booksErrorMessage">Could not connect to the BookNest backend server. Please make sure the Express server is running on localhost.</p>
+          <button class="btn btn-primary" id="retryBooksBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.19"/></svg>
+            <span>Retry Connection</span>
+          </button>
+        </div>
+
+        <!-- Empty Search State -->
+        <div class="state-card empty-state hidden" id="emptySearchState" role="region" aria-label="Search Results">
+          <div class="state-icon">🔍</div>
+          <h3>No books found</h3>
+          <p>No books in our catalog match your search query. Try another title or author.</p>
+          <button class="btn btn-primary" id="clearSearchActionBtn">
+            Reset Search &amp; View All Books
+          </button>
+        </div>
+
+        <!-- Dynamic Books Responsive Grid -->
+        <div class="books-grid hidden" id="booksGrid" role="region" aria-label="Book Catalog Grid">
+          <!-- Dynamically populated via script.js from GET /books -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section class="about-section" id="about">
+      <div class="container about-container">
+        <div class="about-content">
+          <span class="section-tag">About BookNest</span>
+          <h2 class="section-title">Where Every Page Feels Like Home</h2>
+          <p class="about-lead">
+            BookNest is an online bookstore platform engineered to provide readers with an effortless, modern book exploration experience.
+          </p>
+          <p class="about-text">
+            Whether you are expanding your programming mastery with <em>Clean Code</em>, diving into transformative financial wisdom with <em>The Psychology of Money</em>, or discovering philosophical wonder in <em>The Alchemist</em>, BookNest is built to make reading accessible, informative, and delightful.
+          </p>
+
+          <!-- Core Highlights -->
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">📖</span>
+              <div>
+                <h4>Diverse Catalog</h4>
+                <p>Carefully selected books across Fiction, Computer Science, Finance, and Self-Help.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <div>
+                <h4>Instant Title Search</h4>
+                <p>Fast, client-side title search that responds immediately as you type or press Enter.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🔍</span>
+              <div>
+                <h4>Detailed Book Views</h4>
+                <p>Dedicated details view powered by backend <code>GET /books/:id</code> REST calls.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📱</span>
+              <div>
+                <h4>Responsive Experience</h4>
+                <p>Flawlessly styled for seamless reading and browsing on mobile, tablet, and desktop.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assignment Disclosure Notice -->
+          <div class="demo-notice-box">
+            <span class="notice-badge">College Practical Demo</span>
+            <p>
+              BookNest is a student college assignment project created for demonstration and academic evaluation. It is not a commercially operating bookstore.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-media">
+          <div class="about-quote-card">
+            <span class="quote-mark">“</span>
+            <p class="quote-text">
+              A reader lives a thousand lives before he dies. The man who never reads lives only one.
+            </p>
+            <span class="quote-author">— George R. R. Martin</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Connect with BookNest</h2>
+          <p class="section-subtitle">
+            Have questions about our catalog or need book recommendations? Reach out using our demonstration channels.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email Support</h3>
+            <p>For inquiries and catalog recommendations:</p>
+            <a href="mailto:hello@booknest.demo" class="contact-link">hello@booknest.demo</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Demonstration Location</h3>
+            <p>Academic Practical Lab, Computer Science Dept.</p>
+            <span class="contact-sub">Mumbai, Maharashtra 400001</span>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <h3>Reader Service Hours</h3>
+            <p>Available for viva demonstrations:</p>
+            <span class="contact-sub">Monday – Friday: 9:00 AM – 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== INDIVIDUAL BOOK DETAILS MODAL ==================== -->
+  <div class="modal-overlay hidden" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalBookTitle" tabindex="-1">
+    <div class="modal-dialog">
+      <!-- Modal Close Button -->
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close book details modal">
+        &times;
+      </button>
+
+      <!-- Modal Loading State -->
+      <div class="modal-loading" id="modalLoading">
+        <div class="spinner"></div>
+        <p>Loading book details from <code>GET /books/:id</code>...</p>
+      </div>
+
+      <!-- Modal Error State -->
+      <div class="modal-error hidden" id="modalError">
+        <div class="state-icon">⚠️</div>
+        <h3>Failed to Load Book</h3>
+        <p id="modalErrorMessage">Unable to retrieve details for this book ID.</p>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="modal-content-grid hidden" id="modalContent">
+        <div class="modal-cover-wrapper">
+          <img 
+            id="modalBookImage" 
+            src="assets/book-cover-placeholder.svg" 
+            alt="Book cover preview" 
+            class="modal-cover-img"
+            onerror="this.onerror=null;this.src='assets/book-cover-placeholder.svg';">
+          <div class="modal-badge-row">
+            <span class="modal-badge-id" id="modalBookId">ID: #1</span>
+            <span class="modal-badge-category" id="modalBookCategory">Fiction</span>
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <h2 class="modal-title" id="modalBookTitle">The Alchemist</h2>
+          <p class="modal-author" id="modalBookAuthor">By Paulo Coelho</p>
+
+          <div class="modal-meta-bar">
+            <div class="meta-block">
+              <span class="meta-label">Price</span>
+              <span class="meta-value price-highlight" id="modalBookPrice">₹399</span>
+            </div>
+            <div class="meta-block">
+              <span class="meta-label">Pages</span>
+              <span class="meta-value" id="modalBookPages">208 pages</span>
+            </div>
+            <div class="meta-block">
+              <span class="meta-label">Rating</span>
+              <span class="meta-value" id="modalBookRating">⭐ 4.8 / 5</span>
+            </div>
+          </div>
+
+          <div class="modal-description-box">
+            <h4>Book Overview</h4>
+            <p id="modalBookDescription">
+              Book synopsis will appear here.
+            </p>
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn btn-primary" id="modalCloseActionBtn">
+              Close Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <!-- Brand Column -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo">
+          <img src="assets/logo.svg" alt="BookNest Logo" class="brand-icon">
+          <span class="brand-title">BookNest</span>
+        </div>
+        <p class="footer-tagline">
+          Where every page feels like home. Connecting curious minds with timeless literature and cutting-edge knowledge.
+        </p>
+        <div class="demo-tag">College Practical Assignment – Set 3</div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#catalog">Browse Books</a></li>
+          <li><a href="#about">About Our Bookstore</a></li>
+          <li><a href="#contact">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <!-- REST API Endpoints -->
+      <div class="footer-col">
+        <h4 class="footer-heading">REST API Endpoints</h4>
+        <ul class="footer-links">
+          <li><a href="/books" target="_blank" rel="noopener"><code>GET /books</code> (Full Catalog)</a></li>
+          <li><a href="/books/1" target="_blank" rel="noopener"><code>GET /books/1</code> (The Alchemist)</a></li>
+          <li><a href="/books/3" target="_blank" rel="noopener"><code>GET /books/3</code> (Clean Code)</a></li>
+          <li><a href="/health" target="_blank" rel="noopener"><code>GET /health</code> (Server Status)</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Demonstration Info</h4>
+        <p class="footer-info-item"><strong>Project:</strong> Online Bookstore (Set 3)</p>
+        <p class="footer-info-item"><strong>Demo Email:</strong> hello@booknest.demo</p>
+        <p class="footer-info-item"><strong>Server:</strong> Node.js &amp; Express REST API</p>
+        <p class="footer-info-item"><strong>Currency:</strong> Indian Rupee (INR)</p>
+      </div>
+    </div>
+
+    <!-- Copyright Sub-Footer -->
+    <div class="footer-bottom">
+      <div class="container bottom-flex">
+        <p>© <span id="currentYear">2026</span> BookNest Online Bookstore. Created for College Practical Examination.</p>
+        <p class="tech-stack-tag">Built with HTML5, CSS3, Vanilla JavaScript &amp; Express.js</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
